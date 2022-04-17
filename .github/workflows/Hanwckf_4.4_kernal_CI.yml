@@ -1,7 +1,7 @@
 # Build from hanwckf's kernal4.4 repo
 # BY: TurBoTse
 
-name: Build from hanwckf's kernal4.4 repo
+name: Build Padavan 4.4
 
 on:
   repository_dispatch:
