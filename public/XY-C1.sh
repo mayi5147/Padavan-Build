@@ -28,3 +28,17 @@ version_time=$(date +%Y%m%d)                        # 更新时版本号时间: 
 
 echo "更新版本号时间"
 sed -i "s/FIRMWARE_BUILDS_REV=.*/FIRMWARE_BUILDS_REV=$version_time/g" ./versions.inc
+
+# 科学
+echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >>.config # SS plus+
+echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=y" >>.config    # SS server
+echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >>.config      # simple-obfs混淆插件,SS 开了才可以打开
+
+#  代理
+echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >>.config    # SOCKS proxy
+echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=y" >>.config   # TUNSAFE
+echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=y" >>.config    # srelay
+echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=y" >>.config # IPT2
+
+# 其他
+echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >>.config   # zerotier ~1.3M
