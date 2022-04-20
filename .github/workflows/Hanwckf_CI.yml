@@ -3,13 +3,22 @@
 
 name: Build from hanwckf repo
 
-on: 
+on:
+  repository_dispatch:
   workflow_dispatch:
     inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+
+#on: 
+#  workflow_dispatch:
+#    inputs:
 #  schedule:                                                    # 自动编译
 #    - cron: 0 19 * * *                                         # 每天国际时间19点，北京时间凌晨3点执行
-  watch:                                                        # 监视操作
-    types: [started]                                            # 点击 Star 之后
+#    types: [started]                                            # 点击 Star 之后
+
 env:
   build_dir: /opt/padavan                                       # 源码目录
   images_dir: /opt/images                                       # 固件目录
@@ -29,13 +38,8 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7620"
-            targets: "PSG1208 PSG1218 NEWIFI-MINI MI-MINI MI-3 OYE-001 5K-W20"
-          - build_variant: "mt7621"
-            targets: "K2P_nano K2P DIR-878 RM2100 CR660x"
-          - build_variant: "mt7621-usb"
-            targets: "XY-C1 JCG-836PRO JCG-AC860M JCG-Y2 DIR-882 A3004NS MSG1500 WR1200JS MI-R3G NEWIFI3 B70"
-          - build_variant: "mt7628"
-            targets: "HC5861B MI-NANO MZ-R13 MZ-R13P 360P2 HC5761A HC5661A"
+            targets: "PSG1218"
+            
     steps:
       - name: Checkout main            # 导入主分支
         uses: actions/checkout@v2
