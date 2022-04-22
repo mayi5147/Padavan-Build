@@ -38,7 +38,7 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7620"
-            targets: "PSG1218"
+            targets: "HC5561A"
             
     steps:
       - name: Checkout main            # 导入主分支
