@@ -37,8 +37,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - build_variant: "mt7620"
-            targets: "HC5561A"
+          - build_variant: "mt7620-usb"
+            targets: "ZTE_E8820S"
             
     steps:
       - name: Checkout main            # 导入主分支
