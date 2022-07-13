@@ -5,7 +5,7 @@
 #####################################################################
 user_name="admin"                                   # 用户名
 user_password="admin"                               # 登录密码
-lan_ip="192.168.2.1"                          # LAN 地址
+lan_ip="192.168.2"                          # LAN 地址
 dhcp_beg="192.168.2.2"                        # LAN DHCP开始地址
 dhcp_end="192.168.2.254"                       # LAN DHCP结束地址
 default_path="./user/shared"                        # 默认配置路径
