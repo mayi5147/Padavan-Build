@@ -37,8 +37,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - build_variant: "mt7620-usb"
-            targets: "ZTE_E8820S"
+          - build_variant: "mt7621-usb"
+            targets: "MSG1500"
             
     steps:
       - name: Checkout main            # 导入主分支
