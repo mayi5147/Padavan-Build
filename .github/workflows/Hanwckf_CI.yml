@@ -1,7 +1,7 @@
 # Build from hanwckf repo
 # BY: TurBoTse
 
-name: Build from hanwckf repo
+name: Build from hanwckf padavan
 
 on:
   repository_dispatch:
