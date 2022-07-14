@@ -39,7 +39,7 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7621-usb"
-            targets: "MSG1500-7615"
+            targets: "XY-C1"
             
     steps:
       - name: Checkout main            # 导入主分支
